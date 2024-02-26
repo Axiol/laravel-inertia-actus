@@ -2,7 +2,6 @@
 import { Head, Link } from '@inertiajs/react'
 
 const Show = ({ title, description, image }) => {
-  console.log(image)
   return (
     <>
       <Head title={title} />

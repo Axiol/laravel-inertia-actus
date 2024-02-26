@@ -1,7 +1,6 @@
 import { Head, Link } from "@inertiajs/react";
 
 const Flux = ({ articles }) => {
-  console.log(articles);
   return (
     <div>
       <Head title='Flux en continu' />
