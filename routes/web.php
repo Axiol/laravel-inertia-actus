@@ -14,9 +14,5 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', function () {
-    return view('test');
-});
-
 Route::get('en-continu', [ArticleController::class, 'flux'])->name('article.flux');
 Route::get('article/{id}', [ArticleController::class, 'show'])->name('article.show');
