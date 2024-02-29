@@ -5,11 +5,11 @@ const DefaultLayout = ({ children }) => {
 
   return (
     <>
-      <header>
-        <h1>PDT RTBF Actus</h1>
+      <header className='max-w-screen-md mx-auto mb-5'>
+        <h1 className='text-3xl font-bold underline'>PDT RTBF Actus</h1>
         <button onClick={() => setCounter(counter + 1)}>Counter: {counter}</button>
       </header>
-      <main>
+      <main className='max-w-screen-md mx-auto'>
         {children}
       </main>
     </>
