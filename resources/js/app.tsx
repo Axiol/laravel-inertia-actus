@@ -3,12 +3,13 @@ import { createInertiaApp } from '@inertiajs/react'
 import { hydrateRoot } from 'react-dom/client'
 
 import DefaultLayout from './Layouts/Default'
+import React from 'react'
 
 createInertiaApp({
   resolve: name => {
-    const pages = import.meta.glob('./Pages/**/*.jsx', { eager: true })
-    let page = pages[`./Pages/${name}.jsx`]
-    page.default.layout = page.default.layout || (page => <DefaultLayout children={page} />)
+    const pages = import.meta.glob('./Pages/**/*.tsx', { eager: true })
+    let page: any = pages[`./Pages/${name}.tsx`]
+    page.default.layout = page.default.layout || ((page: any) => <DefaultLayout children={page} />)
     return page
   },
   setup({ el, App, props }) {
